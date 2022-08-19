@@ -16,7 +16,7 @@ function HomePage({ products }) {
 
 export default HomePage;
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps(context) {
   console.log("(re)generated...");
   const filePath = path.join(process.cwd(), "data", "dummy-backend.json");
   const jsonData = await fs.readFile(filePath);
