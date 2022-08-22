@@ -10,10 +10,13 @@ function UserProfilePage(props) {
 export default UserProfilePage;
 
 export async function getServerSideProps(context) {
+  const { params, req, res } = context;
+  console.log(params);
+
   return {
     props: {
-      username: 'MAX',
+      username: "MAX",
       time: new Date().toString(),
-    }
+    },
   };
 }
